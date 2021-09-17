@@ -7,19 +7,19 @@ function Leaderboard(props) {
 
    return (
 
+      <div id='leaderboard-alignment'>
+         <ul id="leaderboard-view1">
 
-      <div id="leaderboard-view1">
+
+            {users && users.map(user =>
+
+               <li key={user.id}> <Scores user={user} /> </li>
 
 
-         {users && users.map(user =>
+            )}
 
-             <Scores key={user.id} user={user} />
-
-           
-         )}
-
+         </ul>
       </div>
-
    )
 
 }

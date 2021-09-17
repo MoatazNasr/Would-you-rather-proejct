@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardContent, CardMedia, Radio, Typography, Button, RadioGroup, FormControl, FormControlLabel } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Radio, Typography, Button, RadioGroup,  FormControlLabel } from "@material-ui/core";
 import '../../App.css'
 import { connect } from 'react-redux';
 import { handleAnswerQuestion } from '../../actions/shared'
@@ -40,7 +40,7 @@ function UnAnswered(props) {
     const handleOnSubmit = (e) => {
         e.preventDefault()
         answerQuestion(userID, id, radioValue)
-        history.push('/')
+        history.push(`/questions/${id}`)
     }
 
     return (

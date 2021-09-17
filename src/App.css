@@ -72,6 +72,7 @@ li {
 
 .header
 {
+  
   width: 100%;
   background-color: #282c34;
   display: flex;
@@ -218,7 +219,8 @@ background:linear-gradient(
 
 .progressbar{
   width: 100%;
-  background-color:white ;
+  background-color:#282c34 ;
+  color: white;
 }
 .marked-answer{
   width: 20%;
@@ -262,16 +264,13 @@ background:linear-gradient(
 
 /* leaderboard */
 
-#leaderboard-view1{
+#leaderboard-view1
+{
   width: 100%;
   color: black;
   margin-top:80px ;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
+  position: relative;
+  left: 15rem;
 }
 #leaderboard-view2{
   
