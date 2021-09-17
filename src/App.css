@@ -1,38 +1,389 @@
-.App {
+body {
+  font-size: max(1.4vw,14px);
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  color:white;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style-type: none;
+  padding: 10px;
+  
+}
+.login-letter{
+  position: relative;
+  top: -10px;
+  color: #ff5d8f;
+}
+/* login component section */
+
+.align-Items{
+
+  background-color: white;
+  width: 0px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+.align-Items .avatar-Class{
+
+  position: relative;
+  top: 40px;
+  margin-inline:100px ;
+    
+}
+
+.avatar-Class{
+
+  margin-right:30px ;
+  
   }
+
+.btn{
+  font-size: inherit;
+  margin-top:50px ;
+  width: 400px ;
+  height:50px ;
+  color: #ff5d8f;
+  border: #ff5d8f 2px solid;
+  background-color: #282c34;
+  transition: background-color 0.5s , border-color 0.3s , color 0.2s;
+}
+.btn:hover
+,
+.inside:focus{
+
+  background:linear-gradient(
+    45deg
+    , #ff5d8f 40%, #282c34 60% );
+  border-color:#282c34 ;
+  color: white;
+
 }
 
-.App-header {
+/* nav section */
+
+.header
+{
+  width: 100%;
   background-color: #282c34;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #ff5d8f 4px solid;
+}
+
+.userData ul,
+.nav ul 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+
+.nav .active {
+
+  
+color:#ff5d8f;
+border-bottom: #ff5d8f 2px solid;
+}
+
+
+/* dashboard  component section*/
+.questions-type{
+  width: 100%;
+  margin-top:30px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #282c34;
+  
+
+}
+
+
+.questions-type .btns {
+
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  border: #282c34 3px solid;
+  background: #282c34;
+
+  
+}
+
+.questions-type .questions {
+
+  width: 40%;
+  border: #282c34 3px solid;  
+  background:linear-gradient(
+    90deg
+    , #ff5d9094 10%,#282c34 90% );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.questions-type .border-right{
+
+  border-right: white 3px solid;
+
+}
+
+.questions-type .activeX {
+  color: #ff5d8f;
+}
+
+.questions-type button{
+  font-size: inherit;
+  color: white;
+  height:50px ;
+  border:none;
+  background: none;
+  transition:  color 1s ;
+
+}
+
+.questions-type button:hover,
+.questions-type button:focus{
+
+  color: #ff5d8f;
+
+}
+
+/* questions component section */
+
+#card{
+
+background:linear-gradient(
+  45deg
+  , white 60%, #ff5d9094 30% );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+#link-div{
+
+  background: black;
+  text-align: center;
+  
+}
+#link-div span{
+  transition: color 1s;
+}
+#link-div span:hover{
+
+  color: #ff5d8f;
+}
+
+/* ans & uns questions */
+.list-questions{
+  width: 100%;
+  position: relative;
+  left: -17px;
+}
+
+/* question's result */
+
+#div-1 ,
+#div-2 
+{
+  position: relative;
+  width: 100%;
+  height: 120px;
+  margin: 10px;
+  border: #282c34 2px solid;
+  
+
+}
+
+.progressbar{
+  width: 100%;
+  background-color:white ;
+}
+.marked-answer{
+  width: 20%;
+  font-size: 30px;
+  position: absolute;
+  background-color:white ;
+  color: #ff5d9094;
+  top: -5px;
+  right: -12px;
+  border-radius: 80%;
+  
+
+}
+
+
+/* question without result */
+
+.radio-form{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#radio-btn1,
+#radio-btn2 {
+  background-color: #282c34;
+  color: #ff5d8f;
+  transition: background-color 1s;
+}
+
+#radio-btn1:hover
+,
+#radio-btn2:hover{
+
+  background-color:#282c34b4 ;
+
+}
+
+/* leaderboard */
+
+#leaderboard-view1{
+  width: 100%;
+  color: black;
+  margin-top:80px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+#leaderboard-view2{
+  
+  width: 60%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: black 1px solid;
+  gap: 90px;
+}
+
+.leaderboard-img{
+  background:linear-gradient(
+    45deg
+    , #282c34, #ff5d8f 60%, #ff5d9094 65% );
+    width: 30%;
+    height: 95%;
+}
+.leaderboard-img img {
+  position: relative;
+  top:20px;
+  
+}
+.leaderboard-questions{
+  
+  border-right: 2px solid #ff5d8f;
+  border-left: 2px solid #282c34;
+  padding: 10px;
+  background:linear-gradient(
+    45deg
+    , white 30%, #ff5d8f 60%, white 65% );
+  
+}
+
+.leaderboard-questions p:first-of-type  {
+  border-bottom: 2px solid #282c34;
+  padding-bottom: 5px;
+  
+  
+}
+
+.leaderboard-score{
+  display: flex;
+  background-color: #282c34;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: black 2px solid;
+  border-radius: 10%;
+  color: white;
+
+}
+
+.leaderboard-score span:nth-of-type(1){
+
+  border-bottom: 2px solid #ff5d8f;
+  margin: 10px;
+}
+
+.leaderboard-score span:nth-of-type(2){
+  width: 50%;
+  border-radius: 100%;
+  background-color: #ff5d8f;
+  margin: 15px;
+}
+
+/* NoMatchedRoute */
+#oopss {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5em;
+  
+}
+#oopss #error-text {
+  font-size: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Shabnam', Tahoma, sans-serif;
+  color:#ff5d8f;
+}
+#oopss #error-text img {
+  margin: 85px auto 20px;
+  height: 342px;
+}
+#oopss #error-text span {
+  position: relative;
+  font-size: 3.3em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  
+}
+#oopss #error-text #p-a {
+  font-size: 19px;
+  margin: 30px 0 15px 0;
+  color: #282c34;
+
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: Shabnam;
+  src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.eot");
+  src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.eot?#iefix") format("embedded-opentype"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.woff") format("woff"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.woff2") format("woff2"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: Shabnam;
+  src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.eot");
+  src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.eot?#iefix") format("embedded-opentype"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.woff") format("woff"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.woff2") format("woff2"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.ttf") format("truetype");
+  font-weight: normal;
 }
